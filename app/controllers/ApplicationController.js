@@ -31,8 +31,8 @@ DashboardSample.ApplicationController = M.Controller.extend({
         },
         {
             icon: 'theme/images/icon_edit.png',
-            label: 'Edit',
-            value: 'edit'
+            label: 'Eclipse',
+            value: 'eclipse'
         },
         {
             icon: 'theme/images/icon_wifi.png',
