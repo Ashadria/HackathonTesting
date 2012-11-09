@@ -1,10 +1,24 @@
-/* Put you custom stylings here! */
-.ui-listview {
-    margin-top: 15px !important;
-}
-
 .toolbar {
     margin: 15px -15px -15px -15px;
     width: auto;
     position: relative;
+}
+
+.myBackground {
+	opacity: 0.6;
+	position: fixed;
+	width: 100%;
+	top: 0;
+    left: 0;
+}
+
+img.listFamilyPageMapImage {
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.listFamilePageAddress {
+    font-size: 10px;
+    font-weight: normal;
+    white-space: normal;
 }

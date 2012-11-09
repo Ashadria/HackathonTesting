@@ -1,17 +1,11 @@
-// ==========================================================================
-// The M-Project - Mobile HTML5 Application Framework
-// Generated with: Espresso
-//
-// Project: DashboardSample
-// ==========================================================================
-
 var DashboardSample  = DashboardSample || {};
+
+
 
 /* Page 1 */
 DashboardSample.InitialDashboard = M.PageView.design({
 
-
-    childViews: 'header content',
+    childViews: 'header  content',
 
     events: {
         pageshow: {
@@ -27,7 +21,13 @@ DashboardSample.InitialDashboard = M.PageView.design({
     content: M.ScrollView.design({
         childViews: 'dashboard',
 
+//        background: M.ImageView.design({
+//            value: 'theme/images/dashboardBackground.jpg',
+//            cssClass: 'myBackground'
+//        }),
+
         dashboard: M.DashboardView.design({
+
             events: {
                 tap: {
                     target: DashboardSample.ApplicationController,
@@ -50,14 +50,6 @@ DashboardSample.InitialDashboard = M.PageView.design({
 });
 
 
-DashboardSample.FamilyDoctor = M.PageView.design({
-    childViews: 'header',
-    header: M.ToolbarView.design({
-        value: 'Family Doctor locations',
-        showBackButton: YES
-    })
-});
-
 /* main.js */
 
 DashboardSample.app = M.Application.design({
@@ -66,6 +58,9 @@ DashboardSample.app = M.Application.design({
     entryPage : 'initial',
 
     initial: DashboardSample.InitialDashboard,
-    familyDoctor: DashboardSample.FamilyDoctor
-
+    familyDoctor: DashboardSample.FamilyDoctor,
+    emergencyMedicine: DashboardSample.EmergencyMedicine,
+    pediatrics: DashboardSample.Pediatrics,
+    chiropractic: DashboardSample.Chiropractic,
+    other: DashboardSample.Other
 });

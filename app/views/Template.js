@@ -1,6 +1,6 @@
 DashboardSample.TemplateView = M.ListItemView.design({
     childViews: 'string',
-    isSelectable: NO,
+    isSelectable: YES,
     string: M.LabelView.design({
         valuePattern: '<%= label %>'
     })

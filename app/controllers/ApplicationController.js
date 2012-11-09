@@ -1,11 +1,3 @@
-// ==========================================================================
-// The M-Project - Mobile HTML5 Application Framework
-// Generated with: Espresso
-//
-// Project: DashboardSample
-// Controller: ApplicationController
-// ==========================================================================
-
 DashboardSample.ApplicationController = M.Controller.extend({
 
     items: null,
@@ -26,34 +18,47 @@ DashboardSample.ApplicationController = M.Controller.extend({
         },
         {
             icon: 'theme/images/icon_edit.png',
-            label: 'Eclipse',
-            value: 'e'
-        },
-        {
-            icon: 'theme/images/icon_wifi.png',
-            label: 'WiFi',
-            value: 'wifi'
-        },
-            {
-            icon: 'theme/images/icon_clock.png',
-            label: 'Clock',
-            value: 'clock',
+            label: 'Emergency',
+            value: 'emergency',
             events: {
                 tap: {
                     target: this,
-                    action: function(id) {
-                        this.events.unshift({
-                            label: (this.events.length + 1) + ') ' + M.ViewManager.getViewById(id).label + ' (local)'
-                        });
-                        this.set('events', this.events);
-                    }
+                    action: 'goToEmergencyMedicinePage'
+                }
+            }
+        },
+        {
+            icon: 'theme/images/icon_wifi.png',
+            label: 'Pediatrics',
+            value: 'pediatrics',
+            events: {
+                tap: {
+                    target: this,
+                    action: 'goToPediatricsPage'
+                }
+            }
+        },
+            {
+            icon: 'theme/images/icon_clock.png',
+            label: 'Chiropractic',
+            value: 'chiropractic',
+            events: {
+                tap: {
+                    target: this,
+                    action: 'goToChiropracticPage'
                 }
             }
         },
         {
             icon: 'theme/images/icon_home.png',
-            label: 'Home',
-            value: 'home'
+            label: 'Other',
+            value: 'other',
+            events: {
+                tap: {
+                    target: this,
+                    action: 'goToOtherPage'
+                }
+            }
         }];
 
         this.set('items', items);
@@ -61,6 +66,43 @@ DashboardSample.ApplicationController = M.Controller.extend({
 
     goToFamilyDoctorPage: function() {
     	this.switchToPage('familyDoctor', M.TRANSITION.SLIDE);
-    }
+    },
 
+    goToEmergencyMedicinePage: function () {
+    	this.switchToPage('emergencyMedicine', M.TRANSITION.SLIDE);
+    },
+
+    goToPediatricsPage: function () {
+    	this.switchToPage('pediatrics', M.TRANSITION.SLIDE);
+    },
+
+    goToChiropracticPage: function () {
+    	this.switchToPage('chiropractic', M.TRANSITION.SLIDE);
+    },
+
+    goToOtherPage: function () {
+    	this.switchToPage('other', M.TRANSITION.SLIDE);
+    },
+
+    listObjectClicked : function(id, nameId){
+        console.log('you clicked on the list item with the DOM id:', id, 'and has the name', nameId);
+    }
 });
+
+debugger;
+var myList = [
+              {
+                  name: "List Item 1",
+                  prop: "another property"
+              },
+              {
+                  name: "List Item 2",
+                  prop: "another property"
+              },
+              {
+                  name: "List Item 3",
+                  prop: "another property"
+              }
+              ];
+
+DashboardSample.ApplicationController.set('listObject', myList);
