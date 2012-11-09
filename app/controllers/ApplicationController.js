@@ -20,19 +20,14 @@ DashboardSample.ApplicationController = M.Controller.extend({
             events: {
                 tap: {
                     target: this,
-                    action: function(id) {
-                        this.events.unshift({
-                            label: (this.events.length + 1) + ') ' + M.ViewManager.getViewById(id).label + ' (local)'
-                        });
-                        this.set('events', this.events);
-                    }
+                    action: 'goToFamilyDoctorPage'
                 }
             }
         },
         {
             icon: 'theme/images/icon_edit.png',
             label: 'Eclipse',
-            value: 'eclipse'
+            value: 'e'
         },
         {
             icon: 'theme/images/icon_wifi.png',
@@ -62,6 +57,10 @@ DashboardSample.ApplicationController = M.Controller.extend({
         }];
 
         this.set('items', items);
+    },
+
+    goToFamilyDoctorPage: function() {
+    	this.switchToPage('familyDoctor', M.TRANSITION.SLIDE);
     }
 
 });
