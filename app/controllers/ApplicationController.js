@@ -88,21 +88,3 @@ DashboardSample.ApplicationController = M.Controller.extend({
         console.log('you clicked on the list item with the DOM id:', id, 'and has the name', nameId);
     }
 });
-
-debugger;
-var myList = [
-              {
-                  name: "List Item 1",
-                  prop: "another property"
-              },
-              {
-                  name: "List Item 2",
-                  prop: "another property"
-              },
-              {
-                  name: "List Item 3",
-                  prop: "another property"
-              }
-              ];
-
-DashboardSample.ApplicationController.set('listObject', myList);

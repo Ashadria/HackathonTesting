@@ -1,23 +1,28 @@
 m_require('app/views/FamilyDoctorPageTemplate.js');
-
-DashboardSample.FamilyDoctor = M.PageView.design({
+DashboardSample.FamilyDoctorPage = M.PageView.design({
 
 	childViews: 'header content',
+
+	events: {
+        pageshow: {
+            target: DashboardSample.FamilyDoctorController,
+            action: 'init'
+        }
+    },
 
     header: M.ToolbarView.design({
         value: 'Family Doctor locations',
         showBackButton: YES
     }),
 
-    content: M.ListItemView.design({
+    content: M.PaginationView.design({
 
-    	listItemTemplateView: DashboardSample.FamilyListTemplate,
-
+    	listItemTemplateView: DashboardSample.FamilyDoctorListTemplate,
     	contentBinding: {
-            target: DashboardSample.ApplicationController,
-            property: 'listObject'
+            target: DashboardSample.FamilyDoctorController,
+            property: 'list'
         },
-
-        idName: 'name'
+        itemsPerPage: 10,
+        idName: 'objectID'
     })
 });

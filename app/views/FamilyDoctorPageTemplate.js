@@ -1,15 +1,39 @@
-DashboardSample.FamilyListTemplate = M.ListItemView.design({
+DashboardSample.FamilyDoctorListTemplate = M.ListItemView.design({
 
-	childViews: 'name',
+	childViews: 'image name address',
 
 	events: {
         tap: {
-            target: DashboardSample.ApplicationController,
-            action:'listObjectClicked'
+            //target: DashboardSample.FamilyDoctorController,
+            //action:'listObjectClicked'
         }
     },
 
+    image: M.ImageView.design({
+        computedValue: {
+            valuePattern: '<%= image %>',
+            operation: function(v) {
+                return 'theme/images/' + v;
+            }
+        }
+    }),
+
     name: M.LabelView.design({
-        valuePattern: '<%= name %>'
+        isInline: YES,
+        computedValue: {
+            valuePattern: '<%= name %>',
+            operation: function(v) {
+                return v + ' ';
+            }
+        },
+        cssClass: 'redListItemLabel'
+    }),
+
+    address: M.LabelView.design({
+
+        valuePattern: '<%= address %>',
+
+        cssClass: 'address'
+
     })
 });

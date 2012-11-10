@@ -22,5 +22,8 @@
         "m_id": "m_id",
         "useTransitions": true,
         "enableTouchOverflow": false
-    }
+    },
+    "libraries":[
+    	{"name": "pagination", "refs": ["*"]}
+    ]
 }

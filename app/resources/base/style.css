@@ -1,24 +1,9 @@
-.toolbar {
-    margin: 15px -15px -15px -15px;
-    width: auto;
-    position: relative;
+.myCssClass {
+    color: #FF0000;
 }
 
-.myBackground {
-	opacity: 0.6;
-	position: fixed;
-	width: 100%;
-	top: 0;
-    left: 0;
-}
-
-img.listFamilyPageMapImage {
-    margin-left: 15px;
-    margin-top: 15px;
-}
-
-.listFamilePageAddress {
-    font-size: 10px;
+.address {
+    font-size: 14px;
     font-weight: normal;
     white-space: normal;
 }

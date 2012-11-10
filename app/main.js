@@ -49,16 +49,13 @@ DashboardSample.InitialDashboard = M.PageView.design({
     })
 });
 
-
-/* main.js */
-
 DashboardSample.app = M.Application.design({
 
     /* Define the entry/start page of your app. This property must be provided! */
     entryPage : 'initial',
 
     initial: DashboardSample.InitialDashboard,
-    familyDoctor: DashboardSample.FamilyDoctor,
+    familyDoctor: DashboardSample.FamilyDoctorPage,
     emergencyMedicine: DashboardSample.EmergencyMedicine,
     pediatrics: DashboardSample.Pediatrics,
     chiropractic: DashboardSample.Chiropractic,
