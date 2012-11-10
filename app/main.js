@@ -59,5 +59,6 @@ DashboardSample.app = M.Application.design({
     emergencyMedicine: DashboardSample.EmergencyMedicine,
     pediatrics: DashboardSample.Pediatrics,
     chiropractic: DashboardSample.Chiropractic,
-    other: DashboardSample.Other
+    other: DashboardSample.Other,
+    map: DashboardSample.MapPage
 });

@@ -4,8 +4,8 @@ DashboardSample.FamilyDoctorListTemplate = M.ListItemView.design({
 
 	events: {
         tap: {
-            //target: DashboardSample.FamilyDoctorController,
-            //action:'listObjectClicked'
+            target: DashboardSample.FamilyDoctorController,
+            action:'listObjectClicked'
         }
     },
 

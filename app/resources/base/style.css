@@ -7,3 +7,8 @@
     font-weight: normal;
     white-space: normal;
 }
+
+.map {
+    width: 100%;
+    height: 500px;
+}

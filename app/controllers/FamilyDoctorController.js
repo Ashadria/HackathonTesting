@@ -20,5 +20,9 @@ DashboardSample.FamilyDoctorController = M.Controller.extend({
 	                	name: 'Dr Black'
 	                }
 	                ]);
-	}
+	},
+
+	listObjectClicked : function(id, nameId){
+    	this.switchToPage('map', M.TRANSITION.SLIDE);
+    }
 });
